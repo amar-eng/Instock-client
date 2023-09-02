@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import WarehouseList from '../WarehouseList/WarehouseList';
 import axios from 'axios';
 import { BASE_URL, sortingData } from '../../utils/utils';
-import sortIcon from '../../assets/Icons/sort-24px.svg';
 import './HomePage.scss';
 import { Link } from 'react-router-dom';
+import { WarehouseTableHeader } from '../Warehouse-table-header/WarehouseTableHeader';
 
 function HomePage() {
   const [warehouseList, setWarehouseList] = useState(null);
@@ -78,44 +78,8 @@ function HomePage() {
             </button>
           </Link>
         </div>
-        <div className="warehouse-main__heading-container">
-          <p
-            className="warehouse-main__table-heading warehouse-main__table-heading--item"
-            onClick={() => {
-              sortTable('name');
-            }}
-          >
-            WAREHOUSE
-            <img src={sortIcon} alt="" />
-          </p>
-          <p
-            className="warehouse-main__table-heading warehouse-main__table-heading--address"
-            onClick={() => {
-              sortTable('address');
-            }}
-          >
-            ADDRESS
-            <img src={sortIcon} alt="" />
-          </p>
-          <p
-            className="warehouse-main__table-heading warehouse-main__table-heading--name"
-            onClick={() => {
-              sortTable('contact', 'name');
-            }}
-          >
-            CONTACT NAME
-            <img src={sortIcon} alt="" />
-          </p>
-          <p
-            className="warehouse-main__table-heading warehouse-main__table-heading--info"
-            onClick={() => {
-              sortTable('contact', 'phone');
-            }}
-          >
-            CONTACT INFORMATION <img src={sortIcon} alt="" />
-          </p>
-          <p className="warehouse-main__table-heading">ACTIONS</p>
-        </div>
+        <WarehouseTableHeader sortTable={sortTable} />
+
         <div className="warehouse__table">
           {warehouseList &&
             warehouseList.map((warehouse) => (
