@@ -52,11 +52,11 @@ body {
     text-align: center;
 
     @include tablet {
-      margin-top: 200px;
+      margin-top: 300px;
     }
 
     @include desktop {
-      margin-top: 220px;
+      margin-top: 200px;
     }
   }
 }

@@ -60,7 +60,7 @@ body {
 }
 @media (min-width: 768px) {
   .app-container__copyright {
-    margin-top: 200px;
+    margin-top: 300px;
   }
 }
 @media (min-width: 1280px) {
