@@ -1,6 +1,6 @@
 //******************** API Utilities ********************
 
-const BASE_URL = 'https://instock-deployment.onrender.com';
+const BASE_URL = 'https://serverside-instock.onrender.com';
 
 //******************** Helper Functions ********************
 
